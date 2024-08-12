@@ -1,6 +1,7 @@
-package com.example.flutter_camera_practice
+package com.example.Heritager
 
 import io.flutter.embedding.android.FlutterActivity
 
 class MainActivity: FlutterActivity() {
+
 }

@@ -1,9 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_camera_practice/home_page.dart';
+import 'package:Heritager/home_page.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
-  runApp(const MyApp());
+
+void main() async {
+  await dotenv.load(fileName: ".env");
+
+  runApp(MyApp());
 }
+
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -11,7 +16,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      title: 'Flutter Camera Demo',
+      title: 'Heritager',
       debugShowCheckedModeBanner: false,
       home: HomePage(),
     );

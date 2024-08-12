@@ -1,7 +1,7 @@
 import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_camera_practice/preview_page.dart';
+import 'package:Heritager/preview_page.dart';
 
 class CameraPage extends StatefulWidget {
   const CameraPage({Key? key, required this.cameras}) : super(key: key);
@@ -76,10 +76,10 @@ class _CameraPageState extends State<CameraPage> {
         Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              height: MediaQuery.of(context).size.height * 0.20,
+              height: MediaQuery.of(context).size.height * 0.10,
               decoration: const BoxDecoration(
                   borderRadius: BorderRadius.vertical(top: Radius.circular(24)),
-                  color: Colors.black),
+                  color: Color(0xFFF6F4EB)),
               child:
                   Row(crossAxisAlignment: CrossAxisAlignment.center, children: [
                 Expanded(
@@ -90,7 +90,7 @@ class _CameraPageState extends State<CameraPage> {
                       _isRearCameraSelected
                           ? CupertinoIcons.switch_camera
                           : CupertinoIcons.switch_camera_solid,
-                      color: Colors.white),
+                      color: Color(0xFFF6F4EB)),
                   onPressed: () {
                     setState(
                         () => _isRearCameraSelected = !_isRearCameraSelected);
